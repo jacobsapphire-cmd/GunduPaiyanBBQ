@@ -14,12 +14,15 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">
-            <i class="fa-solid fa-fire-flame-curved"></i> Gundu Paiyan <span>BBQ</span>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-fire-flame-curved"></i> Gundu Paiyan <span>BBQ</span>
+            </div>
+            <div id="shopStatus" class="shop-status"></div>
         </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#features">Why Us</a></li>
             <li><a href="#menu">Menu</a></li>
+            <li><a href="#features">Why Us</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="hamburger">
@@ -34,9 +37,67 @@
             <h1 class="animate-fade-in-up">Feel the Real <span class="highlight">BBQ</span></h1>
             <p class="subtitle animate-fade-in-up delay-1">Made With Love</p>
             <p class="description animate-fade-in-up delay-2">Dine In & Parcel Available. Experience the best barbeque in town.</p>
-            <a href="https://wa.me/918838578062?text=Hi%20Gundu%20Paiyan%20BBQ!%20I%20would%20like%20to%20order%20some%20delicious%20barbeque." class="btn primary-btn animate-fade-in-up delay-3" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> Order Now
+            <a href="#menu" class="btn primary-btn animate-fade-in-up delay-3">
+                <i class="fa-solid fa-utensils"></i> View Menu
             </a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <h2 class="section-title">Our Premium Barbeque</h2>
+        <div class="menu-container">
+            <!-- Item 1 -->
+            <div class="menu-item">
+                <div class="menu-header">
+                    <h3><i class="fa-solid fa-pepper-hot" style="color: #ff4757; margin-right: 8px;"></i> Indian Barbeque</h3>
+                    <span class="badge spicy">Spicy</span>
+                </div>
+                <div class="price-grid">
+                    <button class="price-box" onclick="addToCart('Indian Barbeque - QTR', 130)"><span>QTR</span><br>₹130</button>
+                    <button class="price-box" onclick="addToCart('Indian Barbeque - HALF', 260)"><span>HALF</span><br>₹260</button>
+                    <button class="price-box" onclick="addToCart('Indian Barbeque - FULL', 520)"><span>FULL</span><br>₹520</button>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="menu-item">
+                <div class="menu-header">
+                    <h3><i class="fa-solid fa-leaf" style="color: #2ed573; margin-right: 8px;"></i> Hariyali Barbeque</h3>
+                    <span class="badge mint">Mint</span>
+                </div>
+                <div class="price-grid">
+                    <button class="price-box" onclick="addToCart('Hariyali Barbeque - QTR', 130)"><span>QTR</span><br>₹130</button>
+                    <button class="price-box" onclick="addToCart('Hariyali Barbeque - HALF', 260)"><span>HALF</span><br>₹260</button>
+                    <button class="price-box" onclick="addToCart('Hariyali Barbeque - FULL', 520)"><span>FULL</span><br>₹520</button>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="menu-item">
+                <div class="menu-header">
+                    <h3><i class="fa-solid fa-cheese" style="color: #ffa502; margin-right: 8px;"></i> Malai Barbeque</h3>
+                    <span class="badge cheese">Cheese</span>
+                </div>
+                <div class="price-grid">
+                    <button class="price-box" onclick="addToCart('Malai Barbeque - QTR', 140)"><span>QTR</span><br>₹140</button>
+                    <button class="price-box" onclick="addToCart('Malai Barbeque - HALF', 280)"><span>HALF</span><br>₹280</button>
+                    <button class="price-box" onclick="addToCart('Malai Barbeque - FULL', 560)"><span>FULL</span><br>₹560</button>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="menu-item">
+                <div class="menu-header">
+                    <h3><i class="fa-solid fa-seedling" style="color: #57606f; margin-right: 8px;"></i> Pepper Barbeque</h3>
+                    <span class="badge pepper">Pepper</span>
+                </div>
+                <div class="price-grid">
+                    <button class="price-box" onclick="addToCart('Pepper Barbeque - QTR', 140)"><span>QTR</span><br>₹140</button>
+                    <button class="price-box" onclick="addToCart('Pepper Barbeque - HALF', 280)"><span>HALF</span><br>₹280</button>
+                    <button class="price-box" onclick="addToCart('Pepper Barbeque - FULL', 560)"><span>FULL</span><br>₹560</button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -62,74 +123,16 @@
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="menu-section">
-        <h2 class="section-title">Our Premium Barbeque</h2>
-        <div class="menu-container">
-            <!-- Item 1 -->
-            <div class="menu-item">
-                <div class="menu-header">
-                    <h3><i class="fa-solid fa-pepper-hot" style="color: #ff4757; margin-right: 8px;"></i> Indian Barbeque</h3>
-                    <span class="badge spicy">Spicy</span>
-                </div>
-                <div class="price-grid">
-                    <div class="price-box"><span>QTR</span><br>₹130</div>
-                    <div class="price-box"><span>HALF</span><br>₹260</div>
-                    <div class="price-box"><span>FULL</span><br>₹520</div>
-                </div>
-            </div>
-            
-            <!-- Item 2 -->
-            <div class="menu-item">
-                <div class="menu-header">
-                    <h3><i class="fa-solid fa-leaf" style="color: #2ed573; margin-right: 8px;"></i> Hariyali Barbeque</h3>
-                    <span class="badge mint">Mint</span>
-                </div>
-                <div class="price-grid">
-                    <div class="price-box"><span>QTR</span><br>₹130</div>
-                    <div class="price-box"><span>HALF</span><br>₹260</div>
-                    <div class="price-box"><span>FULL</span><br>₹520</div>
-                </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="menu-item">
-                <div class="menu-header">
-                    <h3><i class="fa-solid fa-cheese" style="color: #ffa502; margin-right: 8px;"></i> Malai Barbeque</h3>
-                    <span class="badge cheese">Cheese</span>
-                </div>
-                <div class="price-grid">
-                    <div class="price-box"><span>QTR</span><br>₹140</div>
-                    <div class="price-box"><span>HALF</span><br>₹280</div>
-                    <div class="price-box"><span>FULL</span><br>₹560</div>
-                </div>
-            </div>
-
-            <!-- Item 4 -->
-            <div class="menu-item">
-                <div class="menu-header">
-                    <h3><i class="fa-solid fa-seedling" style="color: #57606f; margin-right: 8px;"></i> Pepper Barbeque</h3>
-                    <span class="badge pepper">Pepper</span>
-                </div>
-                <div class="price-grid">
-                    <div class="price-box"><span>QTR</span><br>₹140</div>
-                    <div class="price-box"><span>HALF</span><br>₹280</div>
-                    <div class="price-box"><span>FULL</span><br>₹560</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact & Location Section -->
     <section id="contact" class="contact">
         <h2 class="section-title">Visit Us</h2>
         <div class="contact-grid">
-            <div class="contact-info">
+            <div class="contact-info" style="margin: 0 auto; display: flex; flex-direction: column; gap: 30px; max-width: 500px;">
                 <div class="info-item">
                     <i class="fa-solid fa-location-dot"></i>
                     <div>
                         <h4>Location</h4>
-                        <p>SH 206, Pattabiram, Tamil Nadu 600072</p>
+                        <p><a href="https://maps.google.com/?q=SH+206,+Pattabiram,+Tamil+Nadu+600072" target="_blank" style="color: var(--accent-gold); text-decoration: underline;">SH 206, Pattabiram, Tamil Nadu 600072 <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; padding: 0; background: none; color: inherit;"></i></a></p>
                     </div>
                 </div>
                 <div class="info-item">
@@ -147,15 +150,6 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="payment-info">
-                <h3>Accepted Payments</h3>
-                <p>We accept all major UPI payments.</p>
-                <div class="payment-methods">
-                    <img src="Media (1).jpg" alt="Paytm QR Code" class="qr-code" onerror="this.style.display='none'">
-                    <p class="scan-text">Scan to Pay via Paytm / UPI</p>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -167,10 +161,43 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/918838578062?text=Hi%20Gundu%20Paiyan%20BBQ!%20Could%20I%20get%20the%20menu%20and%20place%20an%20order?" class="whatsapp-float" target="_blank" aria-label="Order on WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Order</h2>
+                <button class="close-cart" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items will be injected here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotalPrice">₹0</span>
+                </div>
+                <div class="address-input-group">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                        <label for="deliveryAddress" style="margin-bottom: 0;">Delivery Address / Notes:</label>
+                        <button id="locationBtn" class="location-btn" onclick="getCurrentLocation()"><i class="fa-solid fa-location-crosshairs"></i> Use My Location</button>
+                    </div>
+                    <textarea id="deliveryAddress" placeholder="Enter your full address here..."></textarea>
+                </div>
+                <button class="btn checkout-btn" onclick="checkout()">
+                    <i class="fa-brands fa-whatsapp"></i> Checkout via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <button class="cart-float" onclick="toggleCart()" aria-label="View Cart">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span id="cartBadge" class="cart-badge">0</span>
+    </button>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="toast">Item added to cart!</div>
 
     <script src="script.js"></script>
 </body>
